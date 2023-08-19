@@ -1,0 +1,28 @@
+CREATE TABLE empoylee(
+ id INTEGER,
+ name VARCHAR(50), 
+ birthday DATE, 
+ email VARCHAR(100)
+)
+
+INSERT INTO empoylee (id,"name",birthday,email) VALUES (1,'esma','02/02/2002','guelc');
+INSERT INTO empoylee (id,"name",birthday,email) VALUES (3,'banu','02/06/2002','guelc');
+INSERT INTO empoylee (id,"name",birthday,email) VALUES (4,'ali','12/02/2002','mail');
+INSERT INTO empoylee (id,"name",birthday,email) VALUES (5,'veli','02/02/2010','com');
+INSERT INTO empoylee (id,"name",birthday,email) VALUES (6,'aayşe','09/02/2002','gmail');
+INSERT INTO empoylee (id,"name",birthday,email) VALUES (7,'ahmet','02/02/2002','sacc');
+
+
+SELECT * FROM empoylee;
+
+UPDATE empoylee SET email ='gulec@' WHERE id = 1;
+UPDATE empoylee SET name = 'banu' WHERE id = 1;
+UPDATE empoylee SET id = 2 WHERE name = 'banu';
+UPDATE empoylee SET birthday = '03/03/2002' WHERE id = 2;
+UPDATE empoylee SET name = 'rukiye' WHERE id = 2;
+
+DELETE FROM empoylee WHERE id = 1;
+DELETE FROM empoylee WHERE name = 'ahmet';
+DELETE FROM empoylee WHERE email = 'mail';
+DELETE FROM empoylee WHERE birthday = '09/02/2002';
+DELETE FROM empoylee WHERE id = 3;
